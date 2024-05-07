@@ -26,6 +26,7 @@ pipeline {
    stage('Deploy Image') {
       steps{
         sh '''
+        docker login -u admin -p master123 127.0.0.1:8083
         docker tag testapp 127.0.0.1:8083/testapp
         docker push 127.0.0.1:8083/testapp   
         '''
