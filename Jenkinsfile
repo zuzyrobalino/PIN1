@@ -12,7 +12,7 @@ pipeline {
    stage('Building image') {
       steps{
           sh '''
-          docker build -t PIN1 .
+          docker build -t testapp .
              '''  
         }
     }
